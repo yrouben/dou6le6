@@ -37,11 +37,16 @@ If you plan on using this code, three edits need to be made:
 Need to find the 2 occurrences of “ENTER-SERVER-IP-HERE” and replace them with your server IP.
 
 
-2,3) test.py & dou6le6.py
+2) test.py & dou6le6.py
 
 Need change the CAPS string entries to actual firebase values relevant to your account.
 
 firebase_url = 'https://ENTER-ACCOUNT-NAME-HERE.firebaseio.com/'
 
 firebase_db = '/ENTER-DB-NAME-HERE'
+
+
+3) dou6le6.aia
+
+The app itself needs to have all instances of the firebase info and server IP updated to the developer specific information.
 
