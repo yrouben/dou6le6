@@ -1,0 +1,44 @@
+<!doctype html>
+<head>
+    <title>Dou6l6 Game View: {{ game.name }}</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+    $.get('http://ENTER-SERVER-IP-HERE/game/reset/{{game_id}}',function(data,status) {
+            alert(status);
+    },'html');
+    $("#reset").click(
+        $.get('http://ENTER-SERVER-IP-HERE/game/reset/{{game_id}}',function(data,status) {
+            alert(status);
+        },'html');
+    );
+    
+    </script>
+</head>
+
+<body>
+<div id="info">
+<h1>Game Info: {{game.name}} ({{game_id}}) </h1>
+    <b>Is private?:</b> {{game.is_private}} <br>
+    <b>Has started?:</b> {{game.has_started}} <br>
+    <b>Player ids:</b> {{game.players_list}} <br>
+    <b>Player dominoes:</b> {{game.players_dominoes}} <br>
+    <b>Current player:</b> {{game.current_player}} <br>
+    <b>Left dominoes:</b> {{game.left_dominoes}} <br>
+    <b>Right dominoes:</b> {{game.right_dominoes}} <br>
+    <b>Starting domino:</b> {{game.starting_domino}} <br>
+    <b>Number of each domino: </b> {{game.num_of_each_domino}} <br>
+    <b>Reason for round over: </b> {{game.reason_round_over}} <br>
+    <b>Is the round over?: </b> {{game.is_round_over}} <br>
+    <b>Current points: </b> {{game.points}} <br>
+    <b>Round count: </b> {{game.round_count}} <br>
+    <b>Reason for game over: </b> {{game.reason_game_over}} <br>
+    <b>Is the game over?: </b> {{game.is_game_over}} <br>
+</div>
+    
+<div id = "options">
+
+<button id="reset">Reset Game</button>
+</div>
+</body>
+
+</html>
